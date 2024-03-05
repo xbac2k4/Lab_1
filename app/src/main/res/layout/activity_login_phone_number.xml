@@ -11,6 +11,26 @@
     android:orientation="vertical"
     android:background="#fff">
 
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:src="@drawable/mhc2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back,"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_mhc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="It's convenient, affordable, and fast!"
+        android:textColor="@color/black"/>
+
     <EditText
         android:id="@+id/edt_phonenumber"
         android:layout_width="match_parent"
@@ -21,7 +41,7 @@
         android:textColorHint="#2E2E2E"
         android:background="@drawable/border"
         android:padding="15dp"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawableLeft="@drawable/baseline_phone_24"
         android:drawablePadding="15dp"/>
     <Button
         android:id="@+id/btn_getotp"
@@ -29,30 +49,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#6672FF"
         android:background="@drawable/border"
-        android:text="Get otp"
+        android:text="Get OTP"
         android:textColor="#fff"
         android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/edt_otp"
-        android:layout_width="match_parent"
-        android:layout_marginTop="15dp"
-        android:layout_height="60dp"
-        android:hint="OTP"
-        android:textColorHint="#2E2E2E"
-        android:background="@drawable/border"
-        android:padding="15dp"
-        android:drawableLeft="@drawable/ic_baseline_https_24"
-        android:drawablePadding="15dp"
-        android:inputType="textPassword" />
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#6672FF"
-        android:background="@drawable/border"
-        android:text="LOGIN"
-        android:textColor="#fff"
-        android:layout_marginTop="20dp"/>
-
 </LinearLayout>

@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mAuth = FirebaseAuth.getInstance();
                 mAuth.signOut();
-                startActivity(new Intent(MainActivity.this, Login.class));
-//                startActivity(new Intent(MainActivity.this, Login_PhoneNumber.class));
+                finishAffinity();
+                startActivity(new Intent(MainActivity.this, Welcome.class));
                 Toast.makeText(MainActivity.this, "Đăng xuất", Toast.LENGTH_SHORT).show();
             }
         });

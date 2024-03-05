@@ -3,9 +3,13 @@ package com.example.lab_1;
 import static android.content.ContentValues.TAG;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,31 +37,16 @@ public class Login_PhoneNumber extends AppCompatActivity {
     EditText edt_otp;
     EditText edt_sdt;
     Button btn_getOTP;
-    Button btn_login;
+    Button btn_confirm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_phone_number);
         // ánh xạ
         mAuth = FirebaseAuth.getInstance();
-        edt_otp = findViewById(R.id.edt_otp);
         edt_sdt = findViewById(R.id.edt_phonenumber);
         btn_getOTP = findViewById(R.id.btn_getotp);
-        btn_login = findViewById(R.id.btn_login);
-        //
-        btn_getOTP.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                GetOTP(edt_sdt.getText().toString().trim());
-            }
-        });
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                vetifyOTP(edt_otp.getText().toString().trim());
-            }
-        });
-        //
+
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
@@ -75,6 +64,15 @@ public class Login_PhoneNumber extends AppCompatActivity {
                 mVerificationId = s;
             }
         };
+        //
+        btn_getOTP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                OpenDialogXacNhanOTP();
+                GetOTP(edt_sdt.getText().toString().trim());
+            }
+        });
+        //
     }
     private void GetOTP(String phoneNumber) {
         PhoneAuthOptions options = PhoneAuthOptions.newBuilder(mAuth)
@@ -104,6 +102,23 @@ public class Login_PhoneNumber extends AppCompatActivity {
 
                     }
                 }
+            }
+        });
+    }
+    public void OpenDialogXacNhanOTP() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = getLayoutInflater().inflate(R.layout.layout_dialog_otp, null);
+        builder.setView(view);
+        Dialog dialog = builder.create();
+//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+
+        edt_otp = view.findViewById(R.id.edt_otp);
+        btn_confirm = view.findViewById(R.id.btn_confirm);
+        btn_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                vetifyOTP(edt_otp.getText().toString().trim());
             }
         });
     }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="#6672FF"
+        android:text="XÁC NHẬN OTP"/>
+    <EditText
+        android:id="@+id/edt_otp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="15dp"
+        android:hint="Vetify-OTP"
+        android:inputType="text"
+        android:textColorHint="#2E2E2E"
+        android:background="@drawable/border"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="15dp"/>
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#6672FF"
+        android:background="@drawable/border"
+        android:layout_marginHorizontal="15dp"
+        android:text="Xác nhận"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>
