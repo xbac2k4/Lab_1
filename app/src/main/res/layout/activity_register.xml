@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:orientation="vertical"
+    android:background="#fff">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"/>
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginHorizontal="30dp"
+        android:src="@drawable/mhc2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get On Board!"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="30dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_mhc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="Create your profile to start your Journey"
+        android:textColor="@color/black"/>
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/edt_name"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:hint="Full Name"-->
+<!--        android:inputType="text"-->
+<!--        android:textColorHint="#2E2E2E"-->
+<!--        android:background="@drawable/border"-->
+<!--        android:padding="15dp"-->
+<!--        android:drawableLeft="@drawable/ic_baseline_person_24"-->
+<!--        android:drawablePadding="15dp"/>-->
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="60dp"
+        android:hint="E-Mail"
+        android:inputType="text"
+        android:textColorHint="#2E2E2E"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/border"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="15dp" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="60dp"
+        android:hint="Password"
+        android:textColorHint="#2E2E2E"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/border"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_baseline_https_24"
+        android:drawablePadding="15dp"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/edt_cfpassword"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="60dp"
+        android:hint="Confirm Password"
+        android:textColorHint="#2E2E2E"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/border"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_baseline_https_24"
+        android:drawablePadding="15dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#6672FF"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/border"
+        android:text="SIGNUP"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"/>
+
+
+</LinearLayout>
